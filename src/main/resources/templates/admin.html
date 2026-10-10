@@ -1,0 +1,24 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin - Mercado Express</title>
+</head>
+<body>
+    <h1>Mercado Express</h1>
+    <h2>Painel Administrativo</h2>
+
+    <p>Bem-vindo à área do administrador!</p>
+
+    <p>
+        Esta área será utilizada para gerenciar
+        produtos, estoque e vendas.
+    </p>
+
+    <form th:action="@{/logout}" method="post">
+        <button type="submit">Sair</button>
+    </form>
+</body>
+</html>

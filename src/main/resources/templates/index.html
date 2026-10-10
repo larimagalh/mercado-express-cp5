@@ -1,16 +1,29 @@
+
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR"
+      xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Mercado Express</title>
 </head>
 <body>
 
-<h1>Mercado Express</h1>
+    <h1>Mercado Express</h1>
 
-<p>Checkpoint 5 - Spring Security</p>
+    <p>Checkpoint 5 - Spring Security</p>
 
-/loginLogin</a>
+    <h2>Bem-vindo ao nosso mercado!</h2>
+
+    <p>
+        Faça login ou crie sua conta para
+        acessar nossos serviços.
+    </p>
+
+    <a th:href="@{/login}">Entrar</a>
+
+    <br><br>
+
+    <a th:href="@{/signup}">Criar conta</a>
 
 </body>
 </html>

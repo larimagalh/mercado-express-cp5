@@ -1,32 +1,38 @@
+
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR"
+      xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Cadastro</title>
+    <title>Cadastro - Mercado Express</title>
 </head>
 <body>
+    <h1>Mercado Express</h1>
+    <h2>Criar minha conta</h2>
 
-    <h1>Cadastro de Usuário</h1>
+    <p th:if="${erro}" th:text="${erro}"></p>
 
-    <form>
-
-        <input type="text" placeholder="Nome">
-
-        <br><br>
-
-        <input type="email" placeholder="E-mail">
+    <form th:action="@{/signup}" method="post">
+        <input type="text" name="nome"
+               placeholder="Nome completo" required>
 
         <br><br>
 
-        <input type="password" placeholder="Senha">
+        <input type="email" name="email"
+               placeholder="E-mail" required>
 
         <br><br>
 
-        <button type="submit">
-            Cadastrar
-        </button>
+        <input type="password" name="senha"
+               placeholder="Senha" required
+               minlength="8">
 
+        <br><br>
+
+        <button type="submit">Cadastrar</button>
     </form>
 
+    <p>Já possui uma conta?</p>
+    <a th:href="@{/login}">Fazer login</a>
 </body>
 </html>

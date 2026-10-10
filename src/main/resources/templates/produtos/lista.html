@@ -1,0 +1,107 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produtos | Mercado Express</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f6fa;
+            margin: 0;
+            padding: 40px;
+        }
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+        }
+        h1 { color: #243447; }
+        .btn {
+            display: inline-block;
+            padding: 10px 15px;
+            background: #287b49;
+            color: white;
+            text-decoration: none;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            padding: 12px;
+            border-bottom: 1px solid #ddd;
+            text-align: left;
+        }
+        th { background: #eef3ef; }
+        .acoes {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
+        .acoes form { margin: 0; }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Produtos do Mercado Express</h1>
+
+    <a class="btn" th:href="@{/admin/produtos/novo}">
+        + Novo produto
+    </a>
+
+    <p th:if="${#lists.isEmpty(produtos)}">
+        Nenhum produto cadastrado ainda.
+    </p>
+
+    <table th:unless="${#lists.isEmpty(produtos)}">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>Descrição</th>
+            <th>Preço</th>
+            <th>Estoque</th>
+            <th>Ações</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="produto : ${produtos}">
+            <td th:text="${produto.id}"></td>
+            <td th:text="${produto.nome}"></td>
+            <td th:text="${produto.descricao}"></td>
+            <td th:text="${produto.preco}"></td>
+            <td th:text="${produto.quantidade}"></td>
+            <td>
+                <div class="acoes">
+                    <a class="btn"
+                       th:href="@{/admin/produtos/editar/{id}(id=${produto.id})}">
+                        Editar
+                    </a>
+
+                    <form th:action="@{/admin/produtos/excluir/{id}(id=${produto.id})}"
+                          method="post"
+                          onsubmit="return confirm('Deseja excluir este produto?');">
+                        <button class="btn" type="submit">
+                            Excluir
+                        </button>
+                    </form>
+                </div>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+
+    <p>
+        <a th:href="@{/admin/home}">← Voltar ao painel administrativo</a>
+    </p>
+</div>
+</body>
+</html>
