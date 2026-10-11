@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title th:text="${produto.id == null} ? 'Novo produto | Mercado Express' : 'Editar produto | Mercado Express'">Produto</title>
+    <style>
+        body { font-family: Arial, sans-serif; background: #f5f6fa; margin: 0; padding: 40px; }
+        .container { max-width: 600px; margin: auto; background: white; padding: 30px; border-radius: 12px; }
+        h1 { color: #243447; }
+        label { display: block; margin-top: 15px; font-weight: bold; color: #243447; }
+        input, textarea { width: 100%; padding: 10px; margin-top: 6px; border: 1px solid #ccc; border-radius: 6px; box-sizing: border-box; font-size: 15px; }
+        .botoes { margin-top: 25px; display: flex; gap: 10px; }
+        .btn { padding: 10px 18px; background: #287b49; color: white; text-decoration: none; border: none; border-radius: 6px; cursor: pointer; font-size: 15px; }
+        .btn.secundario { background: #888; }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1 th:text="${produto.id == null} ? 'Cadastrar novo produto' : 'Editar produto'">Produto</h1>
+
+    <!-- Se o produto não tem id é cadastro (CREATE); se tem id é edição (UPDATE) -->
+    <form th:object="${produto}"
+          th:action="${produto.id == null} ? @{/admin/produtos/salvar} : @{/admin/produtos/atualizar/{id}(id=${produto.id})}"
+          method="post">
+
+        <label for="nome">Nome</label>
+        <input id="nome" type="text" th:field="*{nome}" required maxlength="100" placeholder="Ex.: Meia esportiva">
+
+        <label for="descricao">Descrição</label>
+        <textarea id="descricao" th:field="*{descricao}" rows="3" maxlength="255" placeholder="Detalhes do produto"></textarea>
+
+        <label for="preco">Preço (R$)</label>
+        <input id="preco" type="number" th:field="*{preco}" required min="0" step="0.01" placeholder="0,00">
+
+        <label for="quantidade">Quantidade em estoque</label>
+        <input id="quantidade" type="number" th:field="*{quantidade}" required min="0" step="1" placeholder="0">
+
+        <div class="botoes">
+            <button class="btn" type="submit">Salvar</button>
+            <a class="btn secundario" th:href="@{/admin/produtos}">Cancelar</a>
+        </div>
+    </form>
+</div>
+</body>
+</html>

@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR"
       xmlns:th="http://www.thymeleaf.org">
@@ -8,20 +7,24 @@
 </head>
 <body>
 
-    <h1>Bem-vindo ao Mercado Express!</h1>
+<h1>Bem-vindo ao Mercado Express!</h1>
 
-    <p>Você realizou o login com sucesso.</p>
+<p>Você realizou o login com sucesso.</p>
 
-    <h2>Área do Cliente</h2>
+<h2>Área do Cliente</h2>
 
-    <p>
-        Aqui você poderá visualizar os produtos
-        e realizar suas compras.
-    </p>
+<p>
+    Aqui você poderá visualizar os produtos
+    e realizar suas compras.
+</p>
 
-    <form th:action="@{/logout}" method="post">
-        <button type="submit">Sair da conta</button>
-    </form>
+<p>
+    <a th:href="@{/user/produtos}">Ver catálogo de produtos</a>
+</p>
+
+<form th:action="@{/logout}" method="post">
+    <button type="submit">Sair da conta</button>
+</form>
 
 </body>
 </html>

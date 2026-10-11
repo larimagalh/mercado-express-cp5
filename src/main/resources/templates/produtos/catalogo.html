@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo | Mercado Express</title>
+    <style>
+        body { font-family: Arial, sans-serif; background: #f5f6fa; margin: 0; padding: 40px; }
+        .container { max-width: 1000px; margin: auto; background: white; padding: 30px; border-radius: 12px; }
+        h1 { color: #243447; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { padding: 12px; border-bottom: 1px solid #ddd; text-align: left; }
+        th { background: #eef3ef; }
+        .btn { display: inline-block; padding: 8px 14px; background: #287b49; color: white; text-decoration: none; border-radius: 6px; }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Catálogo de produtos</h1>
+    <p>Consulte os produtos disponíveis no Mercado Express.</p>
+
+    <!-- Busca por id (READ de um produto específico) -->
+    <form th:action="@{/user/produtos/buscar}" method="get">
+        <input type="number" name="id" min="1" placeholder="Código do produto" required>
+        <button class="btn" type="submit">Consultar</button>
+    </form>
+
+    <p th:if="${erro}" th:text="${erro}" style="color:#b00020"></p>
+
+    <p th:if="${#lists.isEmpty(produtos)}">Nenhum produto disponível no momento.</p>
+
+    <table th:unless="${#lists.isEmpty(produtos)}">
+        <thead>
+        <tr>
+            <th>Código</th>
+            <th>Nome</th>
+            <th>Descrição</th>
+            <th>Preço</th>
+            <th>Estoque</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="produto : ${produtos}">
+            <td th:text="${produto.id}"></td>
+            <td th:text="${produto.nome}"></td>
+            <td th:text="${produto.descricao}"></td>
+            <td th:text="'R$ ' + ${#numbers.formatDecimal(produto.preco, 1, 'POINT', 2, 'COMMA')}"></td>
+            <td th:text="${produto.quantidade}"></td>
+        </tr>
+        </tbody>
+    </table>
+
+    <p><a th:href="@{/user/home}">← Voltar à área do cliente</a></p>
+</div>
+</body>
+</html>
