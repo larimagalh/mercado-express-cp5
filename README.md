@@ -2,7 +2,7 @@
 
 Projeto acadêmico desenvolvido para a disciplina de Java Advanced da FIAP, utilizando Java 21, Spring Boot, Spring Security, Spring MVC, Thymeleaf, Spring Data JPA e PostgreSQL.
 
-> **Status:** autenticação e autorização implementadas e testadas localmente. O CRUD de produtos, o deploy e os recursos de mensageria/pagamento da Parte 2 ainda serão integrados pelo grupo.
+> **Status:** autenticação e autorização implementadas e testadas loalmente. O CRUD de produtos, o deploy e os recursos de mensageria/pagamento da Parte 2 ainda serão integrados pelo grupo.
 
 ## Objetivo
 
