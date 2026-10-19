@@ -23,7 +23,7 @@ public class HomeController {
         return "home";
     }
 
-    // Catálogo somente leitura para o perfil USER
+    // Catálogo somente leitura para o perfil USERjkdsg
     @GetMapping("/user/produtos")
     public String catalogo(Model model) {
         model.addAttribute("produtos", produtoService.listarTodos());
