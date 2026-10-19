@@ -157,4 +157,43 @@ src/main/resources/
 - Documentação completa, vídeo demonstrativo e demais evidências exigidas no enunciado.
 
 ## Equipe
-👥 Equipe (2TDSPV — Análise e Desenvolvimento de Sistemas)Nome CompletoRMEnzo Xavier CoelhoRM 563379Gustavo Ribeiro PermagnaniRM 564995Julia MenezesRM 565568Larissa Juvenal de MagalhãesRM 566457Matheus GianolliRM 565258Repositório GitHub: https://github.com/larimagalh/mercado-express-cp5Plataforma de Deploy: RenderLink do Deploy: https://SEU-APP-AQUI.onrender.comIDE utilizada: IntelliJ IDEA
+👥 Equipe (2TDSPV — Análise e Desenvolvimento de Sistemas)
+CURSO: Análise e Desenvolvimento de Sistemas (ADS)
+
+TURMA: 2TDSPV
+
+
+
+-------------------------------------------------------------------
+
+INTEGRANTES DO GRUPO:
+
+-------------------------------------------------------------------
+
+- Enzo Xavier Coelho              | RM: 563379
+
+- Gustavo Ribeiro Permagnani      | RM: 564995
+
+- Julia Menezes                   | RM: 565568
+
+- Larissa Juvenal de Magalhães    | RM: 566457
+
+- Matheus Gianolli                | RM: 565258
+
+
+
+-------------------------------------------------------------------
+
+INFORMAÇÕES DO PROJETO:
+
+-------------------------------------------------------------------
+
+- Link do GitHub: https://github.com/larimagalh/mercado-express-cp5
+
+- IDE Utilizada: IntelliJ IDEA
+
+- Plataforma de Deploy: Render
+
+- Link do Deploy (Site Publicado): https://SEU-APP-AQUI.onrender.com
+
+===================================================================
