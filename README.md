@@ -157,12 +157,4 @@ src/main/resources/
 - Documentação completa, vídeo demonstrativo e demais evidências exigidas no enunciado.
 
 ## Equipe
-
-**Integrantes e RMs:** preencher com os dados dos cinco integrantes antes da entrega.
-
-**Repositório:** inserir link definitivo do GitHub.
-
-**Deploy:** pendente.
-
-**IDE:** VS Code nesta etapa; confirmar os ambientes usados pelo grupo para a entrega.
-# mercado-express-cp5
+👥 Equipe (2TDSPV — Análise e Desenvolvimento de Sistemas)Nome CompletoRMEnzo Xavier CoelhoRM 563379Gustavo Ribeiro PermagnaniRM 564995Julia MenezesRM 565568Larissa Juvenal de MagalhãesRM 566457Matheus GianolliRM 565258Repositório GitHub: https://github.com/larimagalh/mercado-express-cp5Plataforma de Deploy: RenderLink do Deploy: https://SEU-APP-AQUI.onrender.comIDE utilizada: IntelliJ IDEA
