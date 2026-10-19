@@ -122,6 +122,29 @@ Salvar as imagens em `docs/images/` e substituir os marcadores abaixo por links 
 ![Usuários cadastrados no PostgreSQL](docs/images/postgresql.png)
 ![Configuração do Spring Initializr](docs/images/spring-initializr.png)
 
+
+## 📸 Evidências Visuais do Projeto
+
+*Todas as imagens abaixo correspondem à versão final rodando na IDE e ao deploy na plataforma Render.*
+
+### 1. Ambiente de Desenvolvimento
+![Projeto no IntelliJ IDEA](docs/images/intellij.png)
+
+### 2. Catálogo (Visão do Usuário)
+![Catálogo de Produtos](docs/images/catalogo.png)
+
+### 3. Sistema Administrativo (CRUD de Produtos)
+**Lista de Produtos:**
+![Lista do CRUD](docs/images/crud-lista.png)
+
+**Cadastro de Novo Produto:**
+![Cadastro no CRUD](docs/images/crud-cadastro.png)
+
+**Edição de Produto:**
+![Edição no CRUD](docs/images/crud-edicao.png)
+
+**Exclusão de Produto:**
+![Exclusão no CRUD](docs/images/crud-exclusao.png)
 ## Estrutura principal
 
 ```text
