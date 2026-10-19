@@ -194,6 +194,6 @@ INFORMAÇÕES DO PROJETO:
 
 - Plataforma de Deploy: Render
 
-- Link do Deploy (Site Publicado): https://SEU-APP-AQUI.onrender.com
+- Link do Deploy (Site Publicado): https://mercado-express-cp5.onrender.com
 
 ===================================================================
